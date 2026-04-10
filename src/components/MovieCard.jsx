@@ -64,10 +64,11 @@ const MovieCard = forwardRef(({ movie, onToggleFavorite, isFavorited }, ref) => 
         </h3>
         
         <div className="movie-meta">
-          <div className="meta-left">
-            <span className="rating">{movie.year}</span>
-            <span className="type">{movie.type?.charAt(0).toUpperCase() || 'Movie'}</span>
-          </div>
+  <div className="meta-left">
+    <span className="rating">{movie.year}</span>
+    <span className="imdb-rating">⭐ {movie.imdbRating}</span>
+    <span className="type">{movie.type?.charAt(0).toUpperCase() || 'Movie'}</span>
+  </div>
           
           <button
             className={`favorite-btn ${isFavorited ? 'liked' : ''}`}
