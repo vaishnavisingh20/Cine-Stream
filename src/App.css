@@ -238,3 +238,40 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
 }
+
+.search-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.debounce-indicator {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.debounce-indicator.waiting {
+  color: #f59e0b; /* Amber */
+  animation: pulse 1s infinite;
+}
+
+.debounce-indicator.ready {
+  color: #10b981; /* Emerald */
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.imdb-rating {
+  background: linear-gradient(45deg, #f59e0b, #fbbf24);
+  color: #1f2937;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
